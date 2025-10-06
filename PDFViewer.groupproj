@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{0F72F5D9-A4C0-4A8B-BA62-80E6A6CD187B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="AdobePDF.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PDFViewer.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="AdobePDF">
+        <MSBuild Projects="AdobePDF.dproj"/>
+    </Target>
+    <Target Name="AdobePDF:Clean">
+        <MSBuild Projects="AdobePDF.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AdobePDF:Make">
+        <MSBuild Projects="AdobePDF.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PDFViewer">
+        <MSBuild Projects="PDFViewer.dproj"/>
+    </Target>
+    <Target Name="PDFViewer:Clean">
+        <MSBuild Projects="PDFViewer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PDFViewer:Make">
+        <MSBuild Projects="PDFViewer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="AdobePDF;PDFViewer"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="AdobePDF:Clean;PDFViewer:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="AdobePDF:Make;PDFViewer:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

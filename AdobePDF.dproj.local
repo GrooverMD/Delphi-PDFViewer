@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/10/06 11:05:06.000.508,=rtl.dcp</Transaction>
+    <Transaction>2025/10/06 11:07:42.868,=rtl.dcp</Transaction>
+    <Transaction>2025/10/06 11:08:31.431,C:\Delphi\VCL\Delphi PDF Viewer\AdobePDF.dproj=C:\Users\oicu8\Documents\Embarcadero\Studio\Projects\Package1.dproj</Transaction>
+    <Transaction>2025/10/06 11:10:19.576,=C:\Delphi\VCL\Delphi PDF Viewer\AcroPDFLib_TLB.pas</Transaction>
+    <Transaction>2025/10/06 11:10:19.621,=C:\Delphi\VCL\Delphi PDF Viewer\AcroPDFLib_TLB.pas</Transaction>
+    <Transaction>2025/10/06 11:10:19.651,=vcl.dcp</Transaction>
+  </Transactions>
+</BorlandProject>
